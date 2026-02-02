@@ -1,0 +1,2 @@
+# python -m pytorch_fid 'E:/code/Grounding-DINO-1.5-API-master/Evaluation Metrics/img/real' 'E:/code/Grounding-DINO-1.5-API-master/Evaluation Metrics/img/generated - p2p'
+# python -m pytorch_fid 'E:/code/Grounding-DINO-1.5-API-master/Evaluation Metrics/img/real - one' 'E:/code/Grounding-DINO-1.5-API-master/Evaluation Metrics/img/generated - one'

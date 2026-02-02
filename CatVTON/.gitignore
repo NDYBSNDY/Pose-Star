@@ -1,0 +1,14 @@
+__pycache__
+model/__pycache__
+model/DensePose/__pycache__
+model/SCHP/__pycache__
+model/SCHP/*/__pycache__
+resource/demo/output
+resource/demo/example/.DS_Store
+Models
+Datasets
+densepose_
+.vscode
+playground.py
+output
+model/cloth_masker_segformer.py

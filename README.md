@@ -1,12 +1,7 @@
-# Pose-Star++: Unified and Training-Free Human-Centric Image Editing with Long and Complex Instructions
-
+# Pose-Star: Anatomy-Aware Editing for Open-World Fashion Images
 ## 📝 Abstract
 
-Human-centric image editing has achieved remarkable progress in single-person scenarios, where the correspondence between language instructions and visual targets is relatively straightforward. However, real-world applications such as portrait retouching, fashion design, and post-production often involve **multi-person scenes**. In these cases, editing instructions must simultaneously specify **which person to edit** and **how to edit**, leading to significantly longer and more complex language descriptions.
-
-To address this challenge, we propose **Pose-Star++**, a unified, training-free framework for human-centric image editing driven by long and complex instructions. Pose-Star++ integrates a large vision-language model for high-level semantic understanding with a bidirectional alignment mechanism that enforces structural consistency at the pose level. This design enables precise target selection and spatially accurate edits across diverse editing scenarios, while remaining fully plug-and-play with existing diffusion-based image editing models.
-
-Extensive experiments demonstrate that Pose-Star++ significantly improves robustness to instruction length and complexity, while maintaining competitive visual quality and strong generalization across multiple human-centric editing tasks.
+To advance real-world fashion image editing, we analyze existing two-stage pipelines—mask generation followed by diffusion-based editing—which overly prioritize generator optimization while neglecting mask controllability. This results in two critical limitations: I) poor user-defined flexibility (coarse-grained human masks restrict edits to predefined regions like upper torso; fine-grained clothes masks preserve poses but forbid style/length customization). II) weak pose robustness (mask generators fail due to articulated poses and miss rare regions like waist, while human parsers remain limited by predefined categories). To address these gaps, we propose Pose-Star, a framework that dynamically recomposes body structures (e.g., neck, chest, etc.) into anatomy-aware masks (e.g., chest-length) for userdefined edits. In Pose-Star, we calibrate diffusion-derived attention (Star tokens) via skeletal keypoints to enhance rare structure localization in complex poses, suppress noise through phase-aware analysis of attention dynamics (Convergence→Stabilization→Divergence) with threshold masking and sliding-window fusion, and refine edges via cross-self attention merging and Canny alignment. This work bridges controlled benchmarks and open-world demands, pioneering anatomy-aware, pose-robust editing and laying the foundation for industrial fashion image editing.
 
 ---
 
